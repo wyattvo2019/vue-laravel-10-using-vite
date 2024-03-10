@@ -120,3 +120,18 @@ class StudentController extends Controller
 }
 ```
 ## 13. # vue-laravel-10-using-vite
+
+## Install canstum
+```
+composer require laravel/sanctum
+```
+```
+hp artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+```
+```
+php artisan migrate
+```
+```
+php artisan make:controller API/AuthController
+```
+
