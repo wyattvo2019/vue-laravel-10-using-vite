@@ -30,7 +30,7 @@ class AuthController extends Controller
       ///login
       //logout
 
-      public function login(Request $request) {
+    public function login(Request $request) {
         if (!Auth::attempt($request->only('email', 'password')))  {
            return response()->json(['message' => 'Unauthorized'], 401);
         }
@@ -43,4 +43,8 @@ class AuthController extends Controller
         $user->tokens()->delete();
         return ['message' => 'Bạn đã thoát ứng dụng và token đã xóa'];
    }
+   public function me(Request $request)
+    {
+    return $request->user();
+    }
 }
