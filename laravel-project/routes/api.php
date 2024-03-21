@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\API\AuthController;
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +45,7 @@ Route::group(['middleware' => ['auth:sanctum']], function () {
 Route::post('/logout', [AuthController::class, 'logout']);
 });
 Route::post('/me', [AuthController::class, 'me'])->middleware('auth:sanctum');
-Route::resource('teachers', ProductController::class);
+Route::resource('teachers', TeacherController::class);
 
 
 
