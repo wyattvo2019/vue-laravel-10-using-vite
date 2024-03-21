@@ -10,8 +10,8 @@ class Teacher extends JsonResource
     {
         return [
             'id' => $this->id,
-            'ten' => $this->name,
-            'tuoi' => $this->age,
+            'name' => $this->name,
+            'age' => $this->age,
             'created_at' => $this->created_at->format('d/m/Y'),
             'updated_at' => $this->updated_at->format('d/m/Y'),
           ];
