@@ -126,7 +126,7 @@ class StudentController extends Controller
 composer require laravel/sanctum
 ```
 ```
-hp artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
+php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
 ```
 ```
 php artisan migrate
